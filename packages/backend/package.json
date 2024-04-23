@@ -1,0 +1,30 @@
+{
+  "name": "extension-template",
+  "displayName": "✨ Extension Template",
+  "description": "Extension Template for Podman Desktop",
+  "version": "1.0.0-next",
+  "icon": "icon.png",
+  "publisher": "redhat",
+  "license": "Apache-2.0",
+  "engines": {
+    "podman-desktop": ">=1.8.0"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {},
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest watch --coverage",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "format:fix": "prettier --write \"src/**/*.ts\"",
+    "watch": "vite --mode development build -w"
+  },
+  "dependencies": {
+    "semver": "^7.6.0"
+  },
+  "devDependencies": {
+    "@podman-desktop/api": "1.8.0",
+    "@types/node": "^20",
+    "vitest": "^1.5.0"
+  }
+}
